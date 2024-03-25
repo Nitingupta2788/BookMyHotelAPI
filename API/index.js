@@ -4,6 +4,7 @@ import hotelRouter from './routers/hotels.js'
 import regRouters from './routers/auth.js'
 import userRouter from './routers/users.js'
 import roomRouter from './routers/rooms.js'
+import stripeRouter from './routers/stripe.js'
 import dotenv from 'dotenv'
 import { errorHandler } from './utils/error.js'
 import cookieParser from 'cookie-parser'
@@ -34,4 +35,5 @@ app.use('/hotels', hotelRouter)
 app.use('/auth', regRouters)
 app.use('/user', userRouter)
 app.use('/rooms', roomRouter)
+app.use('/checkout', stripeRouter)
 app.use(errorHandler)
